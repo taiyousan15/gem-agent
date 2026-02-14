@@ -2,13 +2,31 @@
 
 **Unified Development & Marketing Platform** - AIエージェント、MCPツール、マーケティングスキルを統合した次世代開発プラットフォーム
 
-[![CI](https://github.com/taiyousan15/taisun_agent/actions/workflows/ci.yml/badge.svg)](https://github.com/taiyousan15/taisun_agent/actions/workflows/ci.yml)
-[![Security Scan](https://github.com/taiyousan15/taisun_agent/actions/workflows/security.yml/badge.svg)](https://github.com/taiyousan15/taisun_agent/actions/workflows/security.yml)
+[![CI](https://github.com/taiyousan15/gem-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/taiyousan15/gem-agent/actions/workflows/ci.yml)
 [![Node.js](https://img.shields.io/badge/Node.js-18.x%20%7C%2020.x-green)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3+-blue)](https://www.typescriptlang.org/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Tests](https://img.shields.io/badge/Tests-775%20passing-brightgreen)](https://github.com/taiyousan15/taisun_agent/actions)
-[![Research Sources](https://img.shields.io/badge/Research%20Sources-133-blueviolet)](https://github.com/taiyousan15/taisun_agent/blob/main/.claude/skills/world-research/SKILL.md)
+[![Tests](https://img.shields.io/badge/Tests-1064%20passing-brightgreen)](https://github.com/taiyousan15/gem-agent/actions)
+
+---
+
+> **2026-02-14: v2.15.1 Upstreamマージ & バグ修正（1064/1069テスト通過）**
+>
+> taisun_agent upstream から14コミットをマージし、4つのバグを修正しました。
+>
+> | # | 修正内容 | 影響 |
+> |---|---------|------|
+> | 1 | vitest import → jest globals（3テストファイル） | テスト実行エラー解消 |
+> | 2 | モデル名 claude-opus → claude-opus-4-6（fallback chain一致） | 2テスト修正 |
+> | 3 | security-gate.ts 重複property修正（pattern → reason） | Slack Token検出修復 |
+> | 4 | injection-detector.ts 正規表現構文エラー修正 | パストラバーサル検出修復 |
+>
+> ### アップデート
+>
+> **Mac:**
+> ```bash
+> cd ~/gem-agent && git pull origin main && npm install && npm run build:all
+> ```
 
 ---
 
