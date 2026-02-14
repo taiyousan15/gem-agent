@@ -86,7 +86,12 @@
     "taisun:diagnose": "node scripts/taisun-diagnose.js",
     "taisun:diagnose:full": "node scripts/taisun-diagnose.js --full",
     "taisun:diagnose:fix": "node scripts/taisun-diagnose.js --fix",
-    "taisun:setup": "npm install && npm run build:all && chmod +x .claude/hooks/*.js 2>/dev/null || true && npm run taisun:diagnose"
+    "taisun:setup": "npm install && npm run build:all && chmod +x .claude/hooks/*.js 2>/dev/null || true && npm run taisun:diagnose",
+    "metrics:collect": "node .claude/hooks/metrics-collector.js",
+    "metrics:aggregate": "node .claude/hooks/metrics-aggregator.js",
+    "metrics:report": "node .claude/hooks/generate-metrics-report.js",
+    "metrics:report:7d": "node .claude/hooks/generate-metrics-report.js --days=7",
+    "metrics:report:30d": "node .claude/hooks/generate-metrics-report.js --days=30"
   },
   "keywords": [
     "ai",
@@ -99,13 +104,11 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.20.0",
-    "@langchain/core": "^1.1.8",
-    "@langchain/langgraph": "^1.0.7",
     "@modelcontextprotocol/sdk": "^1.0.0",
     "@types/supertest": "^6.0.3",
     "dotenv": "^16.3.1",
     "express": "^5.2.1",
+    "kuromoji": "^0.1.2",
     "supertest": "^7.1.4",
     "yaml": "^2.3.4"
   },

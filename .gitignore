@@ -72,6 +72,11 @@ test-results.txt
 .workflow_state.json
 .agent_usage_state.json
 
+# Auto-backup system (session-specific data)
+.backups/
+.workflow_state_backups/
+.backup_logs/
+
 # Browser profiles and virtual environments (large cache files)
 .claude/skills/*/data/browser_profile/
 .claude/skills/*/.venv/
@@ -82,11 +87,11 @@ output/
 resource_audit_*.json
 unused_resources_report.json
 
-# LLM Auto-Switching System
-logs/cost-tracking.jsonl
-logs/global-cost-tracking.jsonl
-litellm_postgres_data/
-litellm_redis_data/
-tmp-test-logs/
-tmp-integration-logs/
+# Removed submodule directories (do not re-add)
+taisun_agent/
 
+# Google Auth browser profile (large cache, 959MB)
+google-auth-system/
+
+# Large binary files (GitHub 100MB limit)
+完成版.pdf
