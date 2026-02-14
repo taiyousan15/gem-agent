@@ -1,4 +1,5 @@
-import { describe, it, expect, beforeEach, vi } from 'vitest'
+// jest globals: describe, it, expect, beforeEach
+const vi = jest
 import { ModelRouter } from '../../src/performance/ModelRouter'
 import { CostTracker } from '../../src/performance/CostTracker'
 import type { RoutingCriteria, BudgetStatus } from '../../src/performance/types'
@@ -60,8 +61,8 @@ describe('ModelRouter', () => {
 
   describe('getFallbackModel', () => {
     it('should return next model in fallback chain', () => {
-      const fallback = router.getFallbackModel('claude-opus')
-      expect(fallback).toBe('claude-sonnet')
+      const fallback = router.getFallbackModel('claude-opus-4-6')
+      expect(fallback).toBe('claude-sonnet-4-5')
     })
 
     it('should return null for last model in chain', () => {

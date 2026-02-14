@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, afterEach } from 'vitest'
+// jest globals: describe, it, expect, beforeEach, afterEach
 import * as fs from 'fs'
 import * as path from 'path'
 import { ModelRouter } from '../../src/performance/ModelRouter'
@@ -73,7 +73,7 @@ describe('Model Routing Integration', () => {
 
   describe('Fallback chain', () => {
     it('should have complete fallback chain', () => {
-      let current: any = 'claude-opus'
+      let current: any = 'claude-opus-4-6'
       const chain: string[] = [current]
 
       while (current) {
@@ -82,7 +82,7 @@ describe('Model Routing Integration', () => {
       }
 
       expect(chain.length).toBeGreaterThanOrEqual(3)
-      expect(chain[0]).toBe('claude-opus')
+      expect(chain[0]).toBe('claude-opus-4-6')
     })
   })
 

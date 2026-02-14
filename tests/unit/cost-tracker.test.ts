@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, afterEach } from 'vitest'
+// jest globals: describe, it, expect, beforeEach, afterEach
 import * as fs from 'fs'
 import * as path from 'path'
 import { CostTracker } from '../../src/performance/CostTracker'
